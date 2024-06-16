@@ -106,7 +106,7 @@ const Cart = () => {
           </p>
           <div className="flex justify-between text-body-semibold">
             <span>Total</span>
-            <span>€ {totalRounded.toFixed(2)}</span>
+            <span>€ {totalRounded}</span>
           </div>
         </div>
         <button
