@@ -25,7 +25,7 @@ const ProductInfo = ({ productInfo }: { productInfo: ProductType }) => {
       </div>
 
       <div className="flex gap-2">
-        <p className="text-base-medium text-grey-2">Category:</p>
+        <p className="text-base-medium text-grey-2">Categoria:</p>
         <p className="text-base-bold">{productInfo.category}</p>
       </div>
 
@@ -38,7 +38,7 @@ const ProductInfo = ({ productInfo }: { productInfo: ProductType }) => {
 
       {productInfo.colors.length > 0 && (
         <div className="flex flex-col gap-2">
-          <p className="text-base-medium text-grey-2">Colors:</p>
+          <p className="text-base-medium text-grey-2">Cores:</p>
           <div className="flex gap-2">
             {productInfo.colors.map((color, index) => (
               <p
@@ -57,7 +57,7 @@ const ProductInfo = ({ productInfo }: { productInfo: ProductType }) => {
 
       {productInfo.sizes.length > 0 && (
         <div className="flex flex-col gap-2">
-          <p className="text-base-medium text-grey-2">Sizes:</p>
+          <p className="text-base-medium text-grey-2">Tamanhos:</p>
           <div className="flex gap-2">
             {productInfo.sizes.map((size, index) => (
               <p
@@ -75,10 +75,10 @@ const ProductInfo = ({ productInfo }: { productInfo: ProductType }) => {
       )}
 
       <div className="flex flex-col gap-2">
-        <p className="text-base-medium text-grey-2">Quantity:</p>
+        <p className="text-base-medium text-grey-2">Quantidade:</p>
         <div className="flex gap-4 items-center">
           <MinusCircle
-            className="hover:text-blue-1 cursor-pointer"
+            className={`${quantity === 1 ? "text-grey-2 !cursor-not-allowed" : "hover:text-blue-1 cursor-pointer"}`}
             onClick={() => quantity > 1 && setQuantity(quantity - 1)}
           />
           <p className="text-body-bold">{quantity}</p>

@@ -16,7 +16,6 @@ export const GET = async (req: NextRequest) => {
 
     let user = await User.findOne({ clerkId: userId })
 
-    // When the user sign-in for the 1st, immediately we will create a new user for them
     if (!user) {
       user = await User.create({ clerkId: userId })
       await user.save()

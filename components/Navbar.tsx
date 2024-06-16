@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className="flex gap-4 text-base-bold max-lg:hidden">
         <Link
           href="/"
-          className={`hover:text-blue-1 ${
+          className={`hover:text-blue-1 cursor-pointer ${
             pathname === "/" && "text-blue-1"
           }`}
         >
@@ -35,7 +35,7 @@ const Navbar = () => {
         </Link>
         <Link
           href={user ? "/wishlist" : "/sign-in"}
-          className={`hover:text-blue-1 ${
+          className={`hover:text-blue-1 cursor-pointer ${
             pathname === "/wishlist" && "text-blue-1"
           }`}
         >
@@ -43,7 +43,7 @@ const Navbar = () => {
         </Link>
         <Link
           href={user ? "/orders" : "/sign-in"}
-          className={`hover:text-blue-1 ${
+          className={`hover:text-blue-1 cursor-pointer ${
             pathname === "/orders" && "text-blue-1"
           }`}
         >
@@ -108,7 +108,7 @@ const Navbar = () => {
         )}
 
         {user ? (
-          <UserButton afterSignOutUrl="/sign-in" />
+          <UserButton afterSignOutUrl="/" />
         ) : (
           <Link href="/sign-in">
             <CircleUserRound />
